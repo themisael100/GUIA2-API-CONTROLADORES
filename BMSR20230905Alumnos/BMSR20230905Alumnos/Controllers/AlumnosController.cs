@@ -17,7 +17,7 @@ namespace BMSR20230905Alumnos.Controllers
         [HttpGet("{id}")]
         public Alumnos Get(int id)
         {
-            var alumnos = alumno.FirstOrDefault(c => c.Id == id);
+            var alumnos = alumno.FirstOrDefault(A => A.Id == id);
             return alumnos;
         }
 
@@ -32,7 +32,7 @@ namespace BMSR20230905Alumnos.Controllers
 
         public IActionResult Put(int id, [FromBody] Alumnos alumnos)
         {
-            var existingAlumno = alumno.FirstOrDefault(a => a.Id == id);
+            var existingAlumno = alumno.FirstOrDefault(A => A.Id == id);
             if (existingAlumno != null)
             {
 
@@ -51,7 +51,7 @@ namespace BMSR20230905Alumnos.Controllers
 
         public IActionResult Delete(int id)
         {
-            var existingAlumno = alumno.FirstOrDefault(a => a.Id == id);
+            var existingAlumno = alumno.FirstOrDefault(A => A.Id == id);
             if (existingAlumno != null)
             {
 

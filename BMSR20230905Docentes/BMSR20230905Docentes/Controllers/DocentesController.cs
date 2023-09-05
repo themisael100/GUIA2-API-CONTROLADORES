@@ -20,7 +20,7 @@ namespace BMSR20230905Docentes.Controllers
         [HttpGet("{id}")]
         public Docentes Get(int id)
         {
-            var docentes = Docente.FirstOrDefault(c => c.Id == id);
+            var docentes = Docente.FirstOrDefault(D => D.Id == id);
             return docentes;
         }
     }
